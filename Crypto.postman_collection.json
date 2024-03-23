@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "67b9852a-ae1a-4b79-9a3a-f5421cbe4e70",
+		"name": "Crypto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13299843"
+	},
+	"item": [
+		{
+			"name": "GET Cryptos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto?page=1&limit=20",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Crypto by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/65fec4ad7ed122799366f1aa",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"65fec4ad7ed122799366f1aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Search crypto by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/name/bit",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"name",
+						"bit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Cryptos sorted by market",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/sorted-by-marketcap?order=asc",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"sorted-by-marketcap"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Cryptos sorted by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/sorted-by-date?order=asc",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"sorted-by-date"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Cryptos by price range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/price-range?min=10&max=50",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"price-range"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "10"
+						},
+						{
+							"key": "max",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Crypto list as CSV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/csv",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Crypto by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/65fec4ad7ed122799366f1aa",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"65fec4ad7ed122799366f1aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Reset cryptos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/crypto/reset",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Crypto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"esmerald\",\r\n    \"price\": 123.2,\r\n    \"marketCap\": 10231223\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/crypto",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Crypto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"esmerald\",\r\n    \"price\": 9999,\r\n    \"marketCap\": 10231223\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/crypto/65fec4ad7ed122799366f1aa",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crypto",
+						"65fec4ad7ed122799366f1aa"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
